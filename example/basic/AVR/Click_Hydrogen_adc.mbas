@@ -1,0 +1,25 @@
+module Click_Hydrogen_adc
+
+include Click_Hydrogen_types
+
+sub procedure hydrogen_adcInit() 
+sub function  hydrogen_readADC() as uint32_t 
+
+implements
+
+sub procedure hydrogen_adcInit() 
+
+    ADC_Init() 
+
+end sub
+
+sub function  hydrogen_readADC() as uint32_t 
+dim
+    readADC as uint32_t
+
+    readADC = ADC_Read(7) 
+    result = readADC 
+
+end sub
+
+end.

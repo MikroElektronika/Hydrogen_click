@@ -1,0 +1,5 @@
+module Click_Hydrogen_config
+
+include Click_Hydrogen_types
+
+end.

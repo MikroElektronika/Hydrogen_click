@@ -1,0 +1,28 @@
+unit Click_Hydrogen_adc;
+
+uses Click_Hydrogen_types;
+
+procedure hydrogen_adcInit(); 
+function  hydrogen_readADC() :  uint32_t; 
+
+implementation
+
+procedure hydrogen_adcInit(); 
+begin
+
+    ADC0_Init(); 
+    ADC0_Set_Input_Channel(_ADC_CHANNEL_12); 
+
+end;
+
+function  hydrogen_readADC() :  uint32_t; 
+var
+    readADC : uint32_t;
+begin
+
+    readADC := ADC0_Read(12); 
+    result := readADC; 
+
+end;
+
+end.
